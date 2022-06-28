@@ -37,6 +37,16 @@ class App {
       TextSectionInput,
       (input: TextSectionInput) => new TodoComponent(input.title, input.body),
     );
+
+    // For drag function test dummy
+    this.page.addChild(new ImageComponent('01 - Image Title', 'https://picsum.photos/800/400'));
+    this.page.addChild(new VideoComponent('02 - Video Title', 'https://www.youtube.com/watch?v=sIVQWeGK9s8'));
+    this.page.addChild(new NoteComponent('03 - Note Title', '나는 메모한다. 메모 할거.'));
+    this.page.addChild(new TodoComponent('04 - Todo Title', '나는 한다. 강력한 기능 구현.'));
+    this.page.addChild(new ImageComponent('05 - Image Title', 'https://picsum.photos/800/400'));
+    this.page.addChild(new VideoComponent('06 - Video Title', 'https://www.youtube.com/watch?v=gVZuRKFNKe4'));
+    this.page.addChild(new NoteComponent('07 - Note Title', '나는 메모한다. 기억 할거.'));
+    this.page.addChild(new TodoComponent('08 - Todo Title', '나는 한다. 파멸적인 기능 구현.'));
   }
 
   private bindElementToDialog<T extends (MediaData | TextData) & Component>(
